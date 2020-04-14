@@ -9,10 +9,16 @@ export const login = (data) => {
     })
       .then((resp) => resp.json())
       .then((data) => {
-        dispatch({ type: "LOGIN", data: data });
+        if (!data.error) {
+          //success
+          dispatch({ type: "LOGIN", data: data });
+        } else {
+          //   failure;
+          alert("Invalid Credentials, please try again or sign up");
+        }
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        alert(error);
+      });
   };
 };
-
-// the above action is incomplete. next task is to store user information in redux store as opposed to simply console logging it.
