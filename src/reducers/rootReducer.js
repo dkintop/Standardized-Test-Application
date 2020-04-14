@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import testReducer from "../reducers/testReducer.js";
+import userReducer from "./userReducer.js";
 export default combineReducers({
-  testReducer,
+  userReducer,
 });
