@@ -28,14 +28,19 @@ export class LoginForm extends Component {
         <div>Welcome, Please Login</div>
         <br></br>
         <form onSubmit={this.handleSubmit}>
-          <label>Email:</label>
-          <input onChange={this.handleChange} type="text" name="email"></input>
+          <input
+            onChange={this.handleChange}
+            type="text"
+            name="email"
+            placeholder="Email"
+          ></input>
           <br></br>
-          <label>Password:</label>
+
           <input
             onChange={this.handleChange}
             type="password"
             name="password"
+            placeholder="Password"
           ></input>
           <br></br>
           <input type="submit"></input>
