@@ -11,6 +11,7 @@ export default function userReducer(
         currentUser: action.data,
       };
       break;
+
     default:
       return state;
   }

@@ -3,9 +3,13 @@ import logo from "./logo.svg";
 import "./App.css";
 import LoginForm from "./components/LoginForm";
 import { checkLoginStatus } from "./helpers/checkLoginStatus.js";
-class App extends Component {
+import { persistLogin } from "./actions/index.js";
+import { connect } from "react-redux";
+
+export class App extends Component {
   componentDidMount() {
     let user = checkLoginStatus();
+    this.props.persistLogin(user);
   }
 
   render() {
@@ -17,4 +21,10 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    persistLogin: (data) => dispatch(persistLogin(data)),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(App);

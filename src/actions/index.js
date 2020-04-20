@@ -24,3 +24,7 @@ export const login = (data) => {
       });
   };
 };
+
+export const persistLogin = (data) => {
+  return { type: "LOGIN", data: data };
+};
