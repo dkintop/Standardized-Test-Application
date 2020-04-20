@@ -12,6 +12,7 @@ export const login = (data) => {
         if (!data.error) {
           //success
           dispatch({ type: "LOGIN", data: data });
+
           window.localStorage.setItem("ST_APP", data.token);
         } else {
           //   failure;
