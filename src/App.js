@@ -5,6 +5,8 @@ import LoginForm from "./components/LoginForm";
 import { checkLoginStatus } from "./helpers/checkLoginStatus.js";
 import { persistLogin } from "./actions/index.js";
 import { connect } from "react-redux";
+import RegistrationForm from "./components/RegistrationForm";
+import Logout from "./components/Logout.js";
 
 export class App extends Component {
   componentDidMount() {
@@ -16,6 +18,8 @@ export class App extends Component {
     return (
       <div className="App">
         <LoginForm />
+        <RegistrationForm />
+        <Logout />
       </div>
     );
   }

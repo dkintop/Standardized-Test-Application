@@ -12,6 +12,12 @@ export default function userReducer(
       };
       break;
 
+    case "LOGOUT":
+      return {
+        ...state,
+        currentUser: null,
+      };
+
     default:
       return state;
   }
