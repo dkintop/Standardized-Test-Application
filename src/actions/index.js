@@ -1,6 +1,5 @@
 export const login = (data) => {
   return (dispatch) => {
-    console.log("hit");
     return fetch("http://localhost:3000/login", {
       method: "POST",
       headers: {
@@ -38,14 +37,18 @@ export const registerUser = (data) => {
         "content-type": "application/json",
       },
       body: JSON.stringify({ user: data }),
-    }).then((response) => {
-      if (response.status === 201) {
-        dispatch(login({ email: data.email, password: data.password }));
-        //login defined above, logs user in after registering account
-      } else {
-        console.log("bad");
-      }
-    });
+    })
+      .then((response) => {
+        if (response.status === 201) {
+          dispatch(login({ email: data.email, password: data.password }));
+          //login defined above, logs user in after registering account
+        } else {
+          console.log("bad");
+        }
+      })
+      .catch((error) => {
+        alert(error);
+      });
   };
 };
 

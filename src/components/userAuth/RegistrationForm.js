@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { registerUser, login } from "../actions/index.js";
+import { registerUser, login } from "../../actions/index.js";
 import { connect } from "react-redux";
 export class RegistrationForm extends Component {
   constructor(props) {

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { login } from "../actions/index.js";
+import { login } from "../../actions/index.js";
+
 export class LoginForm extends Component {
   constructor(props) {
     super(props);
