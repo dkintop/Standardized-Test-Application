@@ -42,7 +42,7 @@ export default class AuthorizationContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div id="auth-container">
         {this.registrationVSLogin()}
         <button id="rvl-toggle-btn" onClick={this.toggleRvL}>
           {this.toggleButtonText()}

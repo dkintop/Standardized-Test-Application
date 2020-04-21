@@ -26,10 +26,11 @@ export class LoginForm extends Component {
   render() {
     return (
       <div className="form">
-        <div>Welcome, Please Login</div>
+        <div>Login or register account to continue</div>
         <br></br>
         <form onSubmit={this.handleSubmit}>
           <input
+            className="text-input"
             onChange={this.handleChange}
             type="text"
             name="email"
@@ -38,6 +39,7 @@ export class LoginForm extends Component {
           <br></br>
 
           <input
+            className="text-input"
             onChange={this.handleChange}
             type="password"
             name="password"

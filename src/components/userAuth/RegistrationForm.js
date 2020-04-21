@@ -28,6 +28,7 @@ export class RegistrationForm extends Component {
     return (
       <form className="form" onSubmit={this.handleSubmit}>
         <input
+          className="text-input"
           type="text"
           name="name"
           placeholder="Your Name"
@@ -35,6 +36,7 @@ export class RegistrationForm extends Component {
         ></input>
         <br></br>
         <input
+          className="text-input"
           type="email"
           name="email"
           placeholder="Email Address"
@@ -42,6 +44,7 @@ export class RegistrationForm extends Component {
         ></input>{" "}
         <br></br>
         <input
+          className="text-input"
           type="text"
           name="password"
           placeholder="password"
@@ -50,7 +53,7 @@ export class RegistrationForm extends Component {
         <br></br>
         <label>
           Select Discipline:<br></br>
-          PT/PTA:{" "}
+          PT/PTA:
           <input
             type="radio"
             name="discipline"

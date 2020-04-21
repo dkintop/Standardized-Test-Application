@@ -19,7 +19,7 @@ export class Home extends Component {
   }
 
   render() {
-    return this.userDependentComponent();
+    return <div id="home-container">{this.userDependentComponent()}</div>;
   }
 }
 
