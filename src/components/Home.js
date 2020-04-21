@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import LoginForm from "../components/userAuth/LoginForm.js";
 import Logout from "./userAuth/Logout.js";
+import AuthorizationContainer from "./userAuth/AuthorizationContainer";
 export class Home extends Component {
   userDependentComponent() {
     if (this.props.currentUser) {
