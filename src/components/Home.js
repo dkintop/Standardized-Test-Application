@@ -3,21 +3,22 @@ import { connect } from "react-redux";
 import LoginForm from "../components/userAuth/LoginForm.js";
 import Logout from "./userAuth/Logout.js";
 export class Home extends Component {
-  logInStateDependentComponent() {
+  userDependentComponent() {
     if (this.props.currentUser) {
       return (
         <div>
           {this.props.currentUser.name}
           <Logout />
+          //this will be user dashboard eventually.
         </div>
       );
     } else {
-      return <LoginForm />;
+      return <AuthorizationContainer />;
     }
   }
 
   render() {
-    return this.logInStateDependentComponent();
+    return this.userDependentComponent();
   }
 }
 
@@ -26,4 +27,5 @@ const mapStateToProps = (state) => {
     currentUser: state.userReducer.currentUser,
   };
 };
+
 export default connect(mapStateToProps)(Home);
