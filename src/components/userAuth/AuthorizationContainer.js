@@ -32,7 +32,7 @@ export default class AuthorizationContainer extends Component {
     }
   };
 
-  toggleButtonText = () => {
+  ButtonText = () => {
     if (this.state.RegistrationVSLoginToggle === "Login") {
       return "Register New Account";
     } else {
@@ -42,10 +42,10 @@ export default class AuthorizationContainer extends Component {
 
   render() {
     return (
-      <div id="auth-container">
+      <div className="home-flex 2" id="auth-container">
         {this.registrationVSLogin()}
         <button id="rvl-toggle-btn" onClick={this.toggleRvL}>
-          {this.toggleButtonText()}
+          {this.ButtonText()}
         </button>
       </div>
     );

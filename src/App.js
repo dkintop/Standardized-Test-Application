@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import LoginForm from "./components/userAuth/LoginForm";
+
 import { checkLoginStatus } from "./helpers/checkLoginStatus.js";
 import { persistLogin } from "./actions/index.js";
 import { connect } from "react-redux";

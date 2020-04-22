@@ -14,7 +14,17 @@ export class Home extends Component {
         </div>
       );
     } else {
-      return <AuthorizationContainer />;
+      return (
+        <>
+          <div className="home-flex 1" id="info-box">
+            <div id="info">
+              General Information about the app and features will go here as
+              well as additional decorative elements on this page.
+            </div>
+          </div>
+          <AuthorizationContainer />
+        </>
+      );
     }
   }
 
