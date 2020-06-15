@@ -3,14 +3,14 @@ import { connect } from "react-redux";
 import LoginForm from "../components/userAuth/LoginForm.js";
 import Logout from "./userAuth/Logout.js";
 import AuthorizationContainer from "./userAuth/AuthorizationContainer";
+import clipboard from "../images/clipboard-svgrepo-com (1).svg";
+import Dashboard from "./Dashboard";
 export class Home extends Component {
   userDependentComponent() {
     if (this.props.currentUser) {
       return (
         <div>
-          {this.props.currentUser.name}
-          <Logout />
-          //this will be user dashboard eventually.
+          <Dashboard />
         </div>
       );
     } else {
@@ -18,8 +18,13 @@ export class Home extends Component {
         <>
           <div className="home-flex 1" id="info-box">
             <div id="info">
-              General Information about the app and features will go here as
-              well as additional decorative elements on this page.
+              <p>
+                General Information about the app and features will go here as
+                well as additional decorative elements on this page.
+              </p>
+              <div className="img-container">
+                <img src={clipboard}></img>
+              </div>
             </div>
           </div>
           <AuthorizationContainer />

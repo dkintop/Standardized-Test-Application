@@ -45,9 +45,7 @@ html {
 .home-flex {
   flex: 1;
   border: 2px blue;
-}
-
-.home-flex:first-child {
+  height: 100%;
 }
 
 #info-box {
@@ -59,4 +57,8 @@ html {
   margin-right: 10%;
   margin-left: 10%;
   background-color: azure;
+}
+
+.img-container {
+  height: auto;
 }
